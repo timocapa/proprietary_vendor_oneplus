@@ -46,6 +46,17 @@ cc_prebuilt_library_shared {
 }
 
 android_app_import {
+	name: "CACertService",
+	owner: "oneplus",
+	apk: "proprietary/vendor/app/CACertService/CACertService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
 	name: "CneApp",
 	owner: "oneplus",
 	apk: "proprietary/vendor/app/CneApp/CneApp.apk",
@@ -68,6 +79,17 @@ android_app_import {
 }
 
 android_app_import {
+	name: "QCC-TR-UI",
+	owner: "oneplus",
+	apk: "proprietary/vendor/app/QCC-TR-UI/QCC-TR-UI.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
 	name: "TimeService",
 	owner: "oneplus",
 	apk: "proprietary/vendor/app/TimeService/TimeService.apk",
@@ -76,28 +98,6 @@ android_app_import {
 		enabled: false,
 	},
 	soc_specific: true,
-}
-
-android_app_import {
-	name: "com.qualcomm.qti.gpudrivers.msmnile.api30",
-	owner: "oneplus",
-	apk: "proprietary/vendor/app/com.qualcomm.qti.gpudrivers.msmnile.api30/com.qualcomm.qti.gpudrivers.msmnile.api30.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	soc_specific: true,
-}
-
-android_app_import {
-	name: "PowerOffAlarm",
-	owner: "oneplus",
-	apk: "proprietary/product/app/PowerOffAlarm/PowerOffAlarm.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
 }
 
 android_app_import {
@@ -133,74 +133,6 @@ android_app_import {
 		enabled: false,
 	},
 	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "QtiTelephonyService",
-	owner: "oneplus",
-	apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "WfdService",
-	owner: "oneplus",
-	apk: "proprietary/system_ext/priv-app/WfdService/WfdService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "ims",
-	owner: "oneplus",
-	apk: "proprietary/system_ext/priv-app/ims/ims.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "qcrilmsgtunnel",
-	owner: "oneplus",
-	apk: "proprietary/system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "WfdCommon",
-	owner: "oneplus",
-	jars: ["proprietary/framework/WfdCommon.jar"],
-}
-
-dex_import {
-	name: "qcnvitems",
-	owner: "oneplus",
-	jars: ["proprietary/framework/qcnvitems.jar"],
-}
-
-prebuilt_etc_xml {
-	name: "android.hardware.gnss@2.1-service-qti",
-	owner: "oneplus",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
 }
 
 prebuilt_etc_xml {
